@@ -11,12 +11,12 @@ class User < ActiveRecord::Base
 
   def self.random_people(ids)
     ids = ids.empty? ? [0] : ids
-    People.where("id NOT IN (?)". ids).order("RANDOM()")
+    Person.where("id NOT IN (?)". ids).order("RANDOM()")
   end
 
   def self.liked(ids)
     ids = ids.empty? ? [0] : ids
-    People.where("id IN (?)", ids)
+    Person.where("id IN (?)", ids)
   end
-  
+
 end
