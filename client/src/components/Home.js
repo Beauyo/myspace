@@ -18,7 +18,7 @@ class Home extends React.Component {
         this.setState({ people: people.filter( c => c.id !== id), })
     }
 
-    sample = () => {
+    sample = () => { 
         const { people } = this.state
 
         if (people.length) {
